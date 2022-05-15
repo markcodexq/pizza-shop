@@ -10,13 +10,15 @@ class Product < ActiveRecord::Base
 end
 
 get '/' do
+	
 	erb "Hello! <a href=\"https://github.com/bootstrap-ruby/sinatra-bootstrap\">Original</a> pattern has been modified for <a href=\"http://rubyschool.us/\">Ruby School</a>"			
 end
 
 get '/index' do
+	@products = Product.all
 	erb :index
 end
 
 get '/about' do
 	erb :about
-end 
+end
