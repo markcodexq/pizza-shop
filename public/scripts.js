@@ -11,5 +11,9 @@
 
 function add_to_card(id)
 {
-    alert("Your added pizza with id " + id);
+    var key = "product_" + id; // extract variable
+    
+    var x = window.localStorage.getItem(key);
+    x = x * 1 + 1;
+    window.localStorage.setItem(key, x); 
 }
