@@ -17,7 +17,13 @@ function add_to_card(id)
     x = x * 1 + 1;
     window.localStorage.setItem(key, x);
 
-    alert("Items in your card: " + cart_get_number_of_items())
+    update_orders_input();
+}
+
+function update_orders_input()
+{
+    var orders = cart_get_orders();
+    $("#orders_input").val(orders);
 }
 
 function cart_get_number_of_items()
