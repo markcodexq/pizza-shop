@@ -1,0 +1,66 @@
+
+<h1>List of items</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Pizza</th>
+            <th scope="col">Price</th>
+        </tr>
+    <thead>
+    <tbody>
+        <% @products.each do |product|%>
+            <tr>
+                <th scope="row"><%= product.id %></th>
+                <td><%= product.title %></td>
+                <td><%= product.price %> Rub</td>
+            </tr>
+        <%end%>
+    </tbody>
+</table>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item</th>
+        </tr>
+    <thead>
+    <tbody>
+        <tr>
+          <th>1</th>
+          <td><input id="aaa"></td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td><input id="bbb"></td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td><input id="ccc"></td>
+        </tr>
+    </tbody>
+</table>
+<form action="/cart" method="POST">
+  <div class="mb-3">
+    <label for="phone_n" class="form-label">Phone number</label>
+    <input name="order[phone]" value="" type="login" class="form-control" id="phone_n" placeholder="+1()" >
+  </div>
+
+  <div class="mb-3">
+    <label for="user_n" class="form-label">Name</label>
+    <input name="order[name]" value="" type="phone" class="form-control" id="user_n" placeholder="Enter your Name" >
+  </div>
+
+  <div class="mb-3">
+    <label for="address" class="form-label">Address</label>
+    <input name="order[address]" value="" type="phone" class="form-control" id="address" placeholder="Enter your address" >
+  </div>
+
+  <div class="mb-3">
+    <label for="date" class="form-label">Items</label>
+    <input id="result" name="order[items]" type="text" class="form-control" id="date">
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary">Enroll</button>
+</form>
+

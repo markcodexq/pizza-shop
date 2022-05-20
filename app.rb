@@ -9,6 +9,10 @@ class Product < ActiveRecord::Base
 
 end
 
+class Order < ActiveRecord::Base
+
+end
+
 get '/' do
 	
 	erb "Hello! <a href=\"https://github.com/bootstrap-ruby/sinatra-bootstrap\">Original</a> pattern has been modified for <a href=\"http://rubyschool.us/\">Ruby School</a>"			
@@ -23,6 +27,19 @@ get '/about' do
 	erb :about
 end
 
-post '/cart' do
-	erb "Hello"
+get '/cart' do
+	@products = Product.all
+	erb :cart
 end
+
+post '/cart' do
+	order_new = Order.new params[:order]
+	order_new.save
+	redirect to '/order'
+end
+
+get '/order' do
+	@orders = Order.all
+	erb :order
+end
+
