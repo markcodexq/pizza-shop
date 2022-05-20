@@ -30,3 +30,26 @@
         </tr>
     </tbody>
 </table>
+
+<form action="/cart" method="POST">
+    
+   <input name="order[orders_input]" type="hidden" value="<%= @orders_input %>">
+   
+   <div class="mb-3">
+    <label for="user_n" class="form-label">Name</label>
+    <input name="order[name]" value="" type="phone" class="form-control" id="user_n" placeholder="Enter your Name" >
+  </div>
+  
+  <div class="mb-3">
+    <label for="phone_n" class="form-label">Phone number</label>
+    <input name="order[phone]" value="" type="login" class="form-control" id="phone_n" placeholder="+1()" >
+  </div>
+
+  <div class="mb-3">
+    <label for="address" class="form-label">Delivery Address</label>
+    <input name="order[address]" value="" type="phone" class="form-control" id="address" placeholder="Enter your address" >
+  </div>
+
+  <br>
+  <button type="submit" class="btn btn-success">Enroll</button>
+</form>
