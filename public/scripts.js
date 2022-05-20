@@ -20,17 +20,6 @@ function add_to_card(id)
     update_orders_input();
     update_orders_button();
 }
-function show_orders()
-{
-    var prod_1 = window.localStorage.getItem('product_1')
-    $("#aaa").val(prod_1);
-    var prod_2 = window.localStorage.getItem('product_2')
-    $("#bbb").val(prod_2);
-    var prod_3 = window.localStorage.getItem('product_3')
-    $("#ccc").val(prod_3);
-    var result = cart_get_orders();
-    $("#result").val(result);
-}
 
 function update_orders_input()
 {
